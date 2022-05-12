@@ -9,10 +9,11 @@ inputs:
 outputs:
   pokemon_name:
     description: 'Name des Pokemons'
-    default: 2
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v2
     - run: |
-       echo ${{ inputs.pokemon_name}}
+       chmod +x ${{ github.action_path }}/test.sh 
+       ${{ github.action_path }}/test.sh
       shell: bash 
