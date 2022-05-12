@@ -1,0 +1,18 @@
+name: 'Blog Custom Github Action'
+description: 'Call an API and get the result'
+inputs:
+  pokemon_id:
+    description: 'number of the pokemon in the pokedex'
+    required: true
+    default: 1
+outputs:
+  pokemon_name:
+    description: 'Name des Pokemons'
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v2
+    - run: |
+       chmod +x ${{ github.action_path }}/test.sh 
+       ${{ github.action_path }}/test.sh
+      shell: bash 
