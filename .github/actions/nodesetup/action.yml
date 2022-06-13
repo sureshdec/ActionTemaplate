@@ -1,9 +1,9 @@
 name: 'setup-node'
 description: 'setup-node.'
 inputs:
-      node-version: 
-      description: 'The sbt version to use'
-      required: true
+   node-version: 
+   description: 'The sbt version to use'
+   required: true
 runs:
   using: "composite"
   steps:
