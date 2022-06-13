@@ -26,4 +26,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo  ${{inputs.ENVIRONMENT}
+          echo  ${{inputs.ENVIRONMENT}}
