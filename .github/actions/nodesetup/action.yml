@@ -2,7 +2,7 @@ name: 'setup-node'
 description: 'setup-node.'
 inputs:
    nodeversion: 
-   required: true
+     required: true
 runs:
   using: "composite"
   steps:
