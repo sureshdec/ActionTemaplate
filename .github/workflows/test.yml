@@ -8,9 +8,7 @@ on:
   workflow_call:
      inputs:
       ENVIRONMENT:
-        description: 'Environment'
         required: true
-        default: 'devl'
         type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -28,4 +26,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo  ${{ github.event.inputs.ENVIRONMENT }}
+          echo  ${{inputs.ENVIRONMENT}
