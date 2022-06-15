@@ -1,14 +1,16 @@
 name: 'DownloadArtifact'
 description: 'DownloadArtifact.'
 inputs:
-   artifactName: 
-     required: true
-    artifactPath: 
-     required: true  
+  name: 
+   required: 'true'
+   type: string
+  path: 
+   required: true 
+   type: string
 runs:
   using: "composite"
   steps:
    - uses: actions/download-artifact@v3
      with:
-      artifactName: ${{ inputs.artifactName }}
-      artifactPath: ${{ inputs.artifactPath }}
+      name: ${{ inputs.name }}
+      path: ${{ inputs.path }}
