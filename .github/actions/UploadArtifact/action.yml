@@ -1,10 +1,10 @@
 name: 'UploadArtifact'
 description: 'UploadArtifact.'
 inputs:
-   artifactName: 
-     required: true
+  artifactName: 
+     required: 'true'
      type: string
-    artifactPath: 
+  artifactPath: 
      required: true 
      type: string
 runs:
