@@ -1,0 +1,14 @@
+name: 'UploadArtifact'
+description: 'UploadArtifact.'
+inputs:
+   artifactName: 
+     required: true
+    artifactPath: 
+     required: true  
+runs:
+  using: "composite"
+  steps:
+   - uses: actions/upload-artifact@v2
+     with:
+      artifactName: ${{ inputs.artifactName }}
+      artifactPath: ${{ inputs.artifactPath }}
