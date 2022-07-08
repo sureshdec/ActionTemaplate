@@ -19,3 +19,4 @@ runs:
     - run: |
         pokemon_name=${{ inputs.pokemon_id}}
         echo "::set-output name=pokemon_name::$pokemon_name"
+      shell: bash 
