@@ -1,0 +1,16 @@
+name: 'healthCheck'
+description: 'healthCheck'
+inputs:
+  environmentName:
+    description: 'environmentName'
+    required: true
+outputs:
+  beanstalkStatus:
+    description: 'beanstalkStatus'
+runs:
+  using: "composite"
+  steps:
+    - run: |
+         chmod +x ${{ github.action_path }}/healthCheck.sh 
+         ${{ github.action_path }}/healthCheck.sh ${{ inputs.environmentName}}
+      shell: bash 
