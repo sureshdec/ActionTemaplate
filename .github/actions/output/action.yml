@@ -11,11 +11,10 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2  
     - run: |
-        pokemon_name=${{ inputs.pokemon_id}}
-        echo "::set-output name=pokemon_name::$pokemon_name"
-    - run: |
-       chmod +x ${{ github.action_path }}/test.sh 
-       ${{ github.action_path }}/test.sh ${{ inputs.pokemon_id}}
+         pokemon_name=${{ inputs.pokemon_id}}
+         echo "::set-output name=pokemon_name::$pokemon_name"
+         chmod +x ${{ github.action_path }}/test.sh 
+         ${{ github.action_path }}/test.sh ${{ inputs.pokemon_id}}
       shell: bash 
