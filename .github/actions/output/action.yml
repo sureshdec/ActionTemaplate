@@ -12,8 +12,6 @@ runs:
   using: "composite"
   steps:
     - run: |
-          pokemon_name1="suresh"
-          echo "pokemon_name1=$pokemon_name1 >> $GITHUB_ENV 
-          chmod +x ${{ github.action_path }}/test.sh 
+         chmod +x ${{ github.action_path }}/test.sh 
          ${{ github.action_path }}/test.sh ${{ inputs.pokemon_id}}
       shell: bash 
